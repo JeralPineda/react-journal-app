@@ -6,7 +6,7 @@ export const LoginScreen = () => {
       <>
          <h3 className='auth__title'>Login</h3>
 
-         <form action=''>
+         <form>
             <input type='text' placeholder='Email' name='email' className='auth__input' autoComplete='off' />
             <input type='password' placeholder='Password' name='password' className='auth__input' />
             <button className='btn btn-primary btn-block' type='submit'>
