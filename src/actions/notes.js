@@ -14,7 +14,6 @@ export const startNewNote = () => {
       const doc = await db.collection(`${uid}/journal/notes`).add(newNote);
 
       dispatch(activeNote(doc.id, newNote));
-      console.log(doc);
    };
 };
 
@@ -24,4 +23,9 @@ export const activeNote = (id, note) => ({
       id,
       ...note,
    },
+});
+
+export const setNotes = (notes) => ({
+   type: types.notesLoad,
+   payload: notes,
 });
