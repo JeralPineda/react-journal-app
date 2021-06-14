@@ -1,4 +1,5 @@
 import { db } from '../firebase/firebase-config';
+import { types } from '../types/types';
 
 export const startNewNote = () => {
    return async (dispatch, getSatte) => {
@@ -12,6 +13,15 @@ export const startNewNote = () => {
 
       const doc = await db.collection(`${uid}/journal/notes`).add(newNote);
 
+      dispatch(activeNote(doc.id, newNote));
       console.log(doc);
    };
 };
+
+export const activeNote = (id, note) => ({
+   type: types.notesActive,
+   payload: {
+      id,
+      ...note,
+   },
+});
