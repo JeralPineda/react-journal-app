@@ -36,7 +36,7 @@ export const NoteScreen = () => {
 
             {note.url && (
                <div className='notes__image'>
-                  <img src='https://www.cice.es/wp-content/uploads/2015/03/pez-artwork-ilustraciones.jpg' alt='imagen' />
+                  <img src={note.url} alt='imagen' />
                </div>
             )}
          </div>
