@@ -15,7 +15,8 @@ export const fileUpload = async (file) => {
          const cloundResp = await resp.json();
          return cloundResp.secure_url;
       } else {
-         throw await resp.json();
+         //  throw await resp.json();
+         return null;
       }
    } catch (error) {
       throw error;
