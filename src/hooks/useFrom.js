@@ -5,7 +5,7 @@ export const useForm = (initialState = {}) => {
    const [values, setValues] = useState(initialState);
 
    //    Limpiar el formulario
-   const reset = () => {
+   const reset = (newFormState = initialState) => {
       setValues(initialState);
    };
 
