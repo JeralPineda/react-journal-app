@@ -30,6 +30,16 @@
    }
 }
 
+.btn-danger {
+   background-color: rgb(238, 9, 9);
+
+   transition: background-color 0.3s ease;
+
+   &:hover {
+      background-color: darken($color: rgb(230, 16, 16), $amount: 10);
+   }
+}
+
 .btn-block {
    width: 100%;
 }
