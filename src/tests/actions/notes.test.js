@@ -5,9 +5,9 @@
 import configureStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
 
-import { startLoadingNotes, startNewNote, startSaveNote, startUploading } from '../../actions/notes';
+import { startLoadingNotes, startNewNote, startSaveNote } from '../../actions/notes';
 import { db } from '../../firebase/firebase-config';
-import { fileUpload } from '../../helpers/fileUpload';
+// import { fileUpload } from '../../helpers/fileUpload';
 import { types } from '../../types/types';
 
 jest.mock('../../helpers/fileUpload', () => ({
