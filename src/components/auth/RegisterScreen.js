@@ -11,10 +11,10 @@ export const RegisterScreen = () => {
    const { msgError } = useSelector((state) => state.ui);
 
    const [formValues, handleInputChange] = useForm({
-      name: 'Jeral',
-      email: 'jeral@gmail.com',
-      password: '123456',
-      password2: '123456',
+      name: '',
+      email: '',
+      password: '',
+      password2: '',
    });
 
    const { name, email, password, password2 } = formValues;
@@ -33,7 +33,7 @@ export const RegisterScreen = () => {
 
          return false;
       } else if (!validator.isEmail(email)) {
-         dispatch(setError('Email no valido'));
+         dispatch(setError('Email is not valid'));
 
          return false;
       } else if (password !== password2 || password.length < 5) {
