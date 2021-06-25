@@ -21,3 +21,5 @@ npm install
    REACT_APP_MESSAGINGSENDERID=
    REACT_APP_APPID=
    ```
+
+![imagen de la app](public/journal_app.png)
